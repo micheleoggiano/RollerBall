@@ -130,6 +130,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 513820632981812, guid: 78bd73c4302196948bdc8b9d5d9c11ff, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 154632396581464252, guid: 78bd73c4302196948bdc8b9d5d9c11ff, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -457,6 +461,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3607586627681551586, guid: 753ea9ccf9eee6c42a0954ec8663b992, type: 3}
+      propertyPath: debugPanel
+      value: 
+      objectReference: {fileID: 2117047080}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -812,6 +820,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2156040583747981307, guid: 87a8ae5d7270e204392522ea0d607af6, type: 3}
+      propertyPath: upTransform
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -982,6 +994,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &2117047080 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1436787364061702761, guid: 78bd73c4302196948bdc8b9d5d9c11ff, type: 3}
+  m_PrefabInstance: {fileID: 702676507}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
