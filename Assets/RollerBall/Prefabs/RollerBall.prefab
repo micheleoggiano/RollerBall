@@ -61,14 +61,14 @@ MonoBehaviour:
   OnBurnout:
     m_PersistentCalls:
       m_Calls: []
-  minSlopeAngle: 15
-  maxSlopeAngle: 45
-  isMaxSlopeAngleExclusive: 1
+  minSlopeAngle: 90
+  maxSlopeAngle: 90
+  isAngleValueExclusive: 1
   autoSlope: 0
   manualSlopes:
-  - limitAngle: 30
+  - limitAngle: 90
     slopeMovementData: {fileID: 11400000, guid: c983854a449e3514f8fc411ce1841080, type: 2}
-  - limitAngle: 45
+  - limitAngle: 90
     slopeMovementData: {fileID: 11400000, guid: a241828fe4dd57848bb838303443f2f0, type: 2}
   fallSpeedCap: 12
   maxFallTime: 7
@@ -385,6 +385,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 5acc8ba4-50c2-4127-813f-34e0c3a7c4ce
     m_ActionName: Game/Dash[/XInputControllerWindows/buttonWest,/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 56611fbc-10a0-498d-b802-85521ab0461f
+    m_ActionName: Game/Slam[/Keyboard/leftCtrl]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Game
