@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dba95eea1c70b34489bb64799ca44af, type: 3}
   m_Name: GroundMovementData
   m_EditorClassIdentifier: 
-  accelerationTime: 1
-  maxSpeed: 6
-  decelerationTime: 3
+  accelerationTime: 2
+  maxSpeed: 12
+  decelerationTime: 2
   turningFactor: 1.5
   manualMode: 0
   acceleration: 6
-  deceleration: 2
+  deceleration: 6
