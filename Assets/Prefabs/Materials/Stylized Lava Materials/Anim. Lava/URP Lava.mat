@@ -345,7 +345,7 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _FlowDirection: {r: 0.1, g: 0.5, b: 0, a: 0}
-    - _FoamColor: {r: 2.472286, g: 2.027698, b: 0.4244868, a: 0}
+    - _FoamColor: {r: 1.2361429, g: 1.0138489, b: 0.21224338, a: 0}
     - _Highlight_Color: {r: 1.909434, g: 1.332134, b: 0.24138117, a: 0}
     - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
