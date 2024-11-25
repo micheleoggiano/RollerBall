@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEditor.SceneManagement;
+//using UnityEditor.SceneManagement;
 using CustomInspector;
 using Cinemachine;
 
@@ -55,20 +55,28 @@ public class GameManager : MonoBehaviour
         checkpoint = player.transform.position;
 
         cinemachineBrain = Camera.main.GetComponent<CinemachineBrain>();
-        if (upTransform == null)
+        if (cinemachineBrain == null)
         {
-            GameObject worldUpObject = new GameObject("UpTransform");
-            worldUpObject.transform.rotation = Quaternion.identity;
-            upTransform = worldUpObject.transform;
-            finalWorldUpTransform = upTransform;
-            cinemachineBrain.m_WorldUpOverride = upTransform;
+            Debug.LogWarning("Cinemachine Brain component on the Main Camera is missing.");
         }
         else
         {
-            cinemachineBrain.m_WorldUpOverride = upTransform;
-        }
+            if (upTransform == null)
+            {
+                GameObject worldUpObject = new GameObject("UpTransform");
+                worldUpObject.transform.rotation = Quaternion.identity;
+                upTransform = worldUpObject.transform;
+                finalWorldUpTransform = upTransform;
+                cinemachineBrain.m_WorldUpOverride = upTransform;
+            }
+            else
+            {
+                cinemachineBrain.m_WorldUpOverride = upTransform;
+            }
 
-        Physics.gravity = upTransform.up * -gravityMagnitude;
+            Physics.gravity = upTransform.up * -gravityMagnitude;
+        }
+        
         initialGravity = gravityMagnitude;
     }
 
@@ -102,7 +110,8 @@ public class GameManager : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
 
-            upTransform.rotation = Quaternion.Lerp(startRotation, endRotation, elapsedTime / gravityTransitionDuration);
+            //upTransform.rotation = Quaternion.Lerp(startRotation, endRotation, elapsedTime / gravityTransitionDuration);
+            upTransform.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedTime / gravityTransitionDuration);
             cinemachineBrain.m_WorldUpOverride = upTransform;
 
             yield return null;
@@ -128,8 +137,8 @@ public class GameManager : MonoBehaviour
         player.transform.position = checkpoint;
     }
 
-    public void RestartScene()
-    {
-        EditorSceneManager.LoadScene(0);
-    }
+    //public void RestartScene()
+    //{
+    //    EditorSceneManager.LoadScene(0);
+    //}
 }
